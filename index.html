@@ -506,40 +506,40 @@
         </div>
       </section>
 
-      <button
-        class="common-button card__save-button"
-        type="button"
-        onclick="window['dialog-save'].showModal()"
-        aria-controls="dialog-save"
-      >
-        <svg viewBox="0 0 21 21" width="21" height="21" class="save-icon">
-          <use href="./svg/save.svg#save-ico" />
-        </svg>
-        <span class="button__text"> Сохранить на память</span>
-      </button>
+      </main>  <!-- Закрываем main -->
 
-      <dialog id="dialog-save">
-        <div class="dialog__content">
-          <div class="dialog__content-save-icon">
-            <svg viewBox="0 0 21 21" width="39" height="39" class="">
-              <use href="./svg/save.svg#save-ico" />
-            </svg>
-          </div>
+<footer class="footer">
+  <button
+    class="common-button card__save-button"
+    type="button"
+    onclick="window['dialog-save'].showModal()"
+    aria-controls="dialog-save"
+  >
+    <svg viewBox="0 0 21 21" width="21" height="21" class="save-icon">
+      <use href="./svg/save.svg#save-ico" />
+    </svg>
+    <span class="button__text"> Сохранить на память</span>
+  </button>
+</footer>
 
-          <span class="dialog__content-text"
-            >Вставьте дискету, чтобы продолжить</span
-          >
-        </div>
-        <button
-          class="common-button"
-          type="button"
-          onclick="window['dialog-save'].close(); return false;"
-          aria-controls="dialog-save"
-        >
-          <span class="button__text"> Ок</span>
-        </button>
-      </dialog>
-    </main>
+<dialog id="dialog-save">
+  <div class="dialog__content">
+    <div class="dialog__content-save-icon">
+      <svg viewBox="0 0 21 21" width="39" height="39" class="">
+        <use href="./svg/save.svg#save-ico" />
+      </svg>
+    </div>
+    <span class="dialog__content-text">Вставьте дискету, чтобы продолжить</span>
+  </div>
+  <button
+    class="common-button"
+    type="button"
+    onclick="window['dialog-save'].close()"
+    aria-controls="dialog-save"
+  >
+    <span class="button__text"> Ок</span>
+  </button>
+</dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
