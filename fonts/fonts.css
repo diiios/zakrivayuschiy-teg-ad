@@ -16,7 +16,7 @@
   src:
     local("Inter"),
     local("Inter-Variable"),
-    url(./Inter-Variable.woff2) format("woff2") tech("variations"),
+    url(./Inter-Variable.woff2) format("woff2 supports variations"),
     url(./Inter-Variable.woff2) format("woff2-variations");
   font-weight: 400 700;
   font-stretch: 75% 125%;

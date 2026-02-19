@@ -210,7 +210,6 @@ dialog {
 
 .dialog__content {
   display: flex;
-  display: flex;
   align-items: center;
   gap: 20px;
   width: 263px;
