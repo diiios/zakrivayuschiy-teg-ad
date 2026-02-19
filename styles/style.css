@@ -58,6 +58,12 @@
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
 }
+
+.common-button:focus-visible {
+  box-shadow: 2px 2px 0px var(--main-acсent-color);
+  outline: none;
+}
+
 .common-button .button__text {
   position: relative;
   z-index: 1;
