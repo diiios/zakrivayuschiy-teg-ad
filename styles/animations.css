@@ -9,3 +9,110 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.sparks {
+  fill: transparent;
+  transform-origin: center;
+}
+
+.core {
+  transition: fill 0.3s;
+}
+
+.main-body {
+  transition: fill 0.3s;
+}
+
+/* анимация при наведении */
+
+.card__icon-button:hover:not(:active) .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:hover:not(:active) .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:not(:hover) .main-body {
+  fill: transparent;
+  transition: fill 0.3s 0s;
+}
+
+.card__icon-button:not(:hover) .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
+}
+
+/* анимация при active */
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:not(:active) .main-body {
+  fill: transparent;
+  transition: fill 0.3s 0s;
+}
+
+.card__icon-button:not(:active) .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
+}
+
+/* Лайк поставлен */
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: flashheart 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: flashsparks 0.3s 0.3s ease-in;
+}
+
+/* При наведении на лайкнутое сердце - цвет НЕ меняется на черный */
+.like-icon.is-liked:hover:not(:active) .contour,
+.like-icon.is-liked:hover:not(:active) .main-body,
+.like-icon.is-liked:hover:not(:active) .core {
+  fill: var(--animation-fill-color);
+}
+
+@keyframes flashheart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes flashsparks {
+  from {
+    fill: transparent;
+    transform: scale(0.9);
+  }
+  to {
+    fill: var(--animation-fill-color);
+    transform: scale(1.03);
+  }
+}
